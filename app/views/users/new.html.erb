@@ -1,0 +1,24 @@
+<div class="container" id="signup-form" style="margin-top: 10px;">
+	<h1>Sign Up for Dame Agua</h1>
+  <div class="divider-horizontal"></div>
+
+	<%= form_for @user, url: '/' do |f| %>
+
+	  name: <br> <%= f.text_field :name, class: "text-center" %>
+	  <br>
+	  email: <br> <%= f.text_field :email, class: "text-center" %>
+	  <br>
+    username:  <br> <%= f.text_field :username, class: "text-center" %>
+	  <br>
+	  password: <br> <%= f.password_field :password, class: "text-center" %>
+	  <br>
+	  password confirmation: <br> <%= f.password_field :password_confirmation, class: "text-center" %>
+	  <br>
+    choose a home location: <br> <%= select_tag :home_location, options_for_select(@home_locations), style: "width: 19%"%>
+	  <br>
+    <div class="divider-horizontal"></div>
+	  <%= f.submit "dame agua", class: "signup-btn text-center" %>
+
+	<% end %>
+
+</div>

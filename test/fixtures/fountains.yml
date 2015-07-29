@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  name: MyString
+  fountain_comment: MyText
+  fountain_rating: 1
+  fountain_checkin: 2015-07-28 10:36:48
+
+two:
+  location: MyString
+  name: MyString
+  fountain_comment: MyText
+  fountain_rating: 1
+  fountain_checkin: 2015-07-28 10:36:48

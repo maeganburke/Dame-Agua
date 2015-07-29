@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_location: MyString
+  name: MyString
+  username: MyString
+  avatar: 
+  email: MyString
+  password: MyString
+  fountain_comment: MyText
+  fountain_rating: 1
+  fountain_checkin: 2015-07-28 10:38:45
+
+two:
+  home_location: MyString
+  name: MyString
+  username: MyString
+  avatar: 
+  email: MyString
+  password: MyString
+  fountain_comment: MyText
+  fountain_rating: 1
+  fountain_checkin: 2015-07-28 10:38:45
