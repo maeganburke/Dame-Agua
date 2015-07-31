@@ -2,7 +2,30 @@
 <html>
 <head>
   <title>Dame Agua</title>
+  <!-- jQuery -->
 
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- bootstrap -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
   <nav class="navbar navbar-default navbar-fixed-top" id="navbar" style="color: white">
   <div class="container-fluid" id="navbar">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,38 +39,8 @@
       <a class="navbar-brand" href="/" style="font-size: 20px; color: white">Dame Agua</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-left" style="color: white">
-        <li><a href="/thedeal">what's the deal? <span class="sr-only">(current)</span></a></li>
-        <li><a href="/dameagua">find agua</a></li>
-        <li><a href="/findbottles">find a bottle</a></li>
-        <li><a href="/tapout">#tapout</a></li>
-      </ul>
+    <%= render partial: "layouts/navbar" %>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">login</a>
-          <% if current_user %>
-            <%= link_to 'logout', logout_path %>
-          <% else %>
-            <ul class="dropdown-menu">
-              <li>
-                <%= form_tag "/login", class: "navbar-form navbar-left", role: "signin", id: "signin-form" do -%>
-                <div class="form-group">
-                  <%= text_field_tag :username, nil, class: "form-control text-center", placeholder: "username" %>
-                  <%= text_field_tag :password, nil, class: "form-control text-center", placeholder: "password" %>
-
-                </div>
-                <%= button_tag "get agua", class: "btn btn-default btn-block" %>
-                <%= link_to "need help?", "/help", class: "btn btn-default btn-block" %>
-              <% end -%>
-            <% end %>
-            </li>
-          </ul>
-        <li><a href="/signup">sign up</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
   </nav>
 
@@ -57,26 +50,11 @@
     </div>
   </nav>
 
-  <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-  <!-- bootstrap -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  <!-- Google Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
-
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
 <%= yield %>
+
+  <!-- filepicker -->
+  <%= javascript_include_tag 'application' %>
+  <%= filepicker_js_include_tag %>
 
 </body>
 </html>

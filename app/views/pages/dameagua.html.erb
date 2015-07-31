@@ -1,3 +1,23 @@
-<div class="container">
+<div id="find-agua">
+  <% if current_user.present? %>
+    <h1 id="dame-user"> hey, <span style="color: #b81f00"><%= current_user.show_username %></span>! looking for agua?</h1>
+  <% else %>
+    <h1 id="dame-user"> hey, there! looking for agua?</h1>
+  <% end %>
+
+  <br>
+  <form>
+    <input type="text" name="search" placeholder="enter address" id="address">
+    <input class="searchsubmit" type="button" value="search" onclick="getCoords()" id="submit">
+    <button class="searchsubmit" type="submit" id="current_location">use current location</button>
+
+  </form>
+
+  <div id="divider-vertical"></div>
+  <br>
   
+  <div id="map-canvas" style="width: 700px; height: 400px;"></div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVbwB4MDPuOyIgFJtOxjM-4Xt5CLZXoyw"></script>
+  <script src="googlemaps.js"></script>
 </div>

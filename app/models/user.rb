@@ -1,4 +1,8 @@
+require 'bcrypt'
+
 class User < ActiveRecord::Base
+
+  has_secure_password
 
   has_many :fountain_comments
   has_many :fountain_ratings
@@ -7,7 +11,6 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true
 
   def set_default_role
 		unless self.role
@@ -17,6 +20,18 @@ class User < ActiveRecord::Base
 
   def show_username
     [username].compact.join(" - ")
+  end
+
+  def show_name
+    [name].compact.join(" - ")
+  end
+
+  def show_email
+    [email].compact.join(" - ")
+  end
+
+  def show_home
+    [home_location].compact.join(" - ")
   end
 
 end

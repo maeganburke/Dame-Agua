@@ -11,12 +11,5 @@ class ApplicationController < ActionController::Base
   		@current_user
   	end
   end
-
-  # def admin_only
-  #   unless current_user && current_user.role == 'admin'
-  #     flash[:access_denied] = 'Log in or Sign up!'
-  #     redirect_to '/'
-  #   end
-  # end
-
+  
 end

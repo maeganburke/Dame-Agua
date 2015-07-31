@@ -1,4 +1,4 @@
-<div class="container" id="signup-form" style="margin-top: 10px;">
+<div class="container" id="signup-form" style="margin-top: 0px;">
 	<h1>Sign Up for Dame Agua</h1>
   <div class="divider-horizontal"></div>
 
@@ -16,6 +16,12 @@
 	  <br>
     choose a home location: <br> <%= select_tag :home_location, options_for_select(@home_locations), style: "width: 19%"%>
 	  <br>
+
+		<div>
+			<%= f.label :filepicker_url, "upload an avi" %> <br>
+			<%= f.filepicker_field :filepicker_url %> <!-- User#filepicker_url is a regular string column -->
+		</div>
+
     <div class="divider-horizontal"></div>
 	  <%= f.submit "dame agua", class: "signup-btn text-center" %>
 
