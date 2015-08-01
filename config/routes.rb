@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'profiles/show'
+
   get '/' => 'pages#home'
   get '/thedeal' => 'pages#thedeal'
   get '/dameagua' => 'pages#dameagua'
   get '/findbottles' => 'pages#findbottles'
   get '/tapout' => 'pages#tapout'
-  get '/help' => 'pages#help' # with contact form 
+  get '/help' => 'pages#help' # with contact form
 
   get '/users' => 'users#index'
   get '/signup' => 'users#new'
@@ -14,5 +16,9 @@ Rails.application.routes.draw do
 
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#delete'
+
+  namespace :admin do
+    resources :users, only: [:index, :new, :create]
+  end
 
 end
