@@ -8,7 +8,7 @@
 User.destroy_all
 
 users_info = [
-	{name: 'Maegan', username: "maebo", home_location: 'BCN', email: 'maegan@gmail.com', password: '1234'},
+	{name: 'Maegan', username: "maebo", home_location: 'BCN', email: 'm@gmail.com', password: '1234'},
 ]
 
 users_info.each do |user_info|
@@ -16,7 +16,7 @@ users_info.each do |user_info|
 end
 
 admins_info =[
-	{email: 'maegan.burke@gmail.com', password: 'admin'}
+	{email: 'maebo@gmail.com', password: 'admin', username: 'admin'}
 ]
 
 admins_info.each do |admin_info|

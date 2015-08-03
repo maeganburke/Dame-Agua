@@ -1,7 +1,5 @@
-<div id="find-agua" style="padding-top:0px" onload="initialize()">
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+<div id="find-agua" style="padding-top:0px">
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVbwB4MDPuOyIgFJtOxjM-4Xt5CLZXoyw"></script>
-  <script src="googlemaps.js"></script>
 
   <% if current_user.present? %>
     <h1 id="dame-user"> hey, <span style="color: #b81f00"><%= current_user.show_username %></span>! looking for agua?</h1>
@@ -10,9 +8,10 @@
   <% end %>
 
   <br>
-  <form>
+  <form id="searchForm">
     <input id="address" type="textbox" placeholder="enter address">
-    <input type="button" value="search" onclick="codeAddress()" class="searchsubmit">
+    <input type="submit" value="search" class="searchsubmit">
+    <input type="button" value="use current location" class="searchsubmit" id="currentLocation">
   </form>
 
   <br>
@@ -43,7 +42,3 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  initMap()
-</script>

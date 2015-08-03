@@ -17,8 +17,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#delete'
 
+  get '/admin' => 'admin/sessions#create'
+
   namespace :admin do
-    resources :users
+    resources :users, :sessions
   end
-  
 end

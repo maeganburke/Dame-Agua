@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 // sitewide
 body {
   padding-top: 53px;
@@ -179,13 +183,13 @@ body {
   border: none;
   height: 30px;
   width: 200px;
+  border: none;
 }
 
 .searchsubmit:hover {
   background-color: #b81f00;
   color: white;
   border-radius: 3px;
-  border: none;
 }
 
 #map-canvas {
