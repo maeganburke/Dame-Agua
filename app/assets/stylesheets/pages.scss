@@ -156,14 +156,7 @@ body {
 
 #dame-user {
   text-align: center;
-}
-
-#divider-vertical {
-  height: 225px;                   // any height
-  border-left: 1px solid gray;     // right or left is the same
-  float: left;                     // so BS grid doesn't break
-  opacity: .3;
-  margin-top: 35px;
+  font-size: 30px;
 }
 
 #address {
@@ -210,18 +203,50 @@ body {
   border: none;
 }
 
-#nevermind:hover {
-  background-color: #005e66;
+#nevermind {
   border: none;
 }
 
+#nevermind:hover {
+  background-color: #005e66;
+}
+
 #fountain-modal {
+  text-align: center;
   background-color: #005e66;
   color: white;
-  height: 50px;
+  border-radius: 3px;
+  border: none;
+  height: 30px;
+  width: 700px;
+  font-size: 14px;
 }
 
 #fountain-modal:hover {
   background-color: #b81f00;
+}
 
+#myModal {
+  text-align: center;
+}
+
+// findbottle page
+#bottle-page {
+  text-align: center;
+  padding: 0 30px;
+}
+
+#bottle-modal {
+  text-align: center;
+  background-color: #005e66;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  height: 30px;
+  width: 200px;
+  font-size: 14px;
+}
+
+#bottle-modal:hover {
+  background-color: #b81f00;
 }

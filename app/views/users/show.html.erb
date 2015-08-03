@@ -1,11 +1,14 @@
 <div class = "container" id="profile">
 
 		<h1> welcome back, <p style="color: #b81f00"><%= current_user.show_username %></p> </h1>
-		<div class="divider-horizontal"></div>
+		<div class="divider-horizontal"></div>	
 		<img src="<%= current_user.filepicker_url%>" alt="user logo" >
+		<div class="divider-horizontal"></div>
 
-		<p> name: <%= current_user.show_name %> </p>
-		<p> email: <%= current_user.show_email %> </p>
-		<p> home city: <%= current_user.show_home %> </p>
-
+		<span id="profile-content">
+			<p> <b>username:</b> <%= current_user.show_username %> </p>
+			<p> <b>name:</b> <%= current_user.show_name %> </p>
+			<p> <b>email:</b> <%= current_user.show_email %> </p>
+			<p> <b>home city:</b> <%= current_user.show_home %> </p>
+		</span>
 </div>

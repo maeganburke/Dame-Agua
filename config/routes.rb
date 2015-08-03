@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#delete'
 
   namespace :admin do
-    resources :users, only: [:index, :new, :create]
+    resources :users
   end
-
+  
 end
