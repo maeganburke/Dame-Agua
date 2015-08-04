@@ -23,15 +23,7 @@
 </head>
 
 <body data-spy="scroll" data-target="navbar">
-  <div class="navbar navbar-default navbar-fixed-top" id="navbar" style="color: white">
-  <div class="container-fluid" id="navbar">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-      <a class="navbar-brand" href="/" style="font-size: 20px; color: white">Dame Agua</a>
-    </div>
+
 
     <% if current_admin.present? %>
       <%= render partial: "layouts/adminnav" %>

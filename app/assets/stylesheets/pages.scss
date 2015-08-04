@@ -1,43 +1,21 @@
-body {
-  position: relative;
-}
-
 // sitewide
 body {
+  position: relative;
   padding-top: 53px;
   padding-bottom: 60px;
   background-color: #ededed;
   font-family: 'Quicksand', sans-serif;
   }
 
-#adminnav {
-  background-color: #b81f00;
-  color: white;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  border-bottom: 2px solid #005e66;
+button {
+  transition: 1s all;
 }
 
-.admin.nav.navbar-nav.navbar-left li a {
-    color: white;
+input {
+  transition: 1s all;
 }
 
-.admin.nav.navbar-nav.navbar-left li a:hover {
-  background-color: #005e66;
-  color: white;
-}
-
-.admin.nav.navbar-nav.navbar-right li a {
-  color: white;
-}
-
-.admin.nav.navbar-nav.navbar-right li a:hover {
-  background-color: #005e66;
-  color: white;
-}
-
-.user {
+#navbar {
   background-color: #005e66;
   color: white;
   font-family: 'Quicksand', sans-serif;
@@ -55,11 +33,11 @@ body {
   color: white;
 }
 
-.user.nav.navbar-nav.navbar-right li a {
+.navbar-default .navbar-nav>li>a {
   color: white;
 }
 
-.user.nav.navbar-nav.navbar-right li a:hover {
+#navbar.navbar-default .navbar-nav>li>a:hover {
   background-color: #b81f00;
   color: white;
 }
@@ -188,9 +166,9 @@ body {
 }
 
 .divider-vertical {
-  height: 225px;                   // any height
-  border-left: 1px solid gray;     // right or left is the same
-  float: left;                     // so BS grid doesn't break
+  height: 225px;
+  border-left: 1px solid gray;
+  float: left;
   opacity: .3;
   margin-top: 35px;
 }
@@ -224,7 +202,7 @@ img {
 }
 
 .searchsubmit {
-  background-color: #005e66;
+  background-color: #b81f00;
   color: white;
   border-radius: 3px;
   border: none;
@@ -233,8 +211,30 @@ img {
 }
 
 .searchsubmit:hover {
-  background-color: #b81f00;
+  height: 35px;
+  width: 220px;
+}
+
+#currentLocation {
+  background-color: #2e2e2e;
   color: white;
+  border-radius: 3px;
+  border: none;
+  height: 30px;
+  width: 200px;
+}
+
+#currentLocation:hover {
+  height: 35px;
+  width: 220px;
+}
+
+#favorites {
+  background-color: gray;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 100px;
   border-radius: 3px;
 }
 
@@ -245,15 +245,6 @@ img {
 
 #map-canvas:hover {
   border: 1px #b81f00 solid;
-  border-radius: 3px;
-}
-
-#favorites {
-  background-color: #b81f00;
-  color: white;
-  border: none;
-  height: 30px;
-  width: 100px;
   border-radius: 3px;
 }
 
@@ -292,7 +283,12 @@ img {
   border: none;
 }
 
+#fountain-submit  :hover {
+  background-color: #005e66;
+}
+
 #nevermind {
+  background-color: #2e2e2e;
   border: none;
 }
 
@@ -313,6 +309,7 @@ img {
 
 #fountain-modal:hover {
   background-color: #b81f00;
+  border: none;
 }
 
 #myModal {
@@ -341,6 +338,10 @@ img {
 }
 
 // tapout
+#tapout {
+  margin-top: 50px;
+}
+
 #tapoutCalculator {
   text-align: center;
 }
@@ -377,7 +378,7 @@ img {
 }
 
 #result {
-  font-size: 25px;
+  font-size: 22px;
   background-color: #005e66;
   color: white;
   margin-left: 10%;

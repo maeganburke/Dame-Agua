@@ -1,3 +1,17 @@
-// Place all the styles related to the admin controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#adminnav {
+  background-color: #141414;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  border-bottom: 3px solid #005e66;
+}
+
+.admin.nav.navbar-nav.navbar-left li a {
+    color: white;
+}
+
+.admin.nav.navbar-nav.navbar-left li a:hover {
+  background-color: #005e66;
+  color: white;
+}

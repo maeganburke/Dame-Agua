@@ -1,8 +1,28 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="adminnav" style="padding:0">
+<div class="navbar navbar-default navbar-fixed-top" style="color: white">
+<div class="container-fluid" id="adminnav">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="/admin" style="font-size: 20px; color: white">Dame Admin</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="adminnav" style="padding:0">
   <ul class="admin nav navbar-nav navbar-left" style="color: white">
-    <li><a href="/thedeal">users<span class="sr-only">(current)</span></a></li>
+    <li><a href="/admin/users">users<span class="sr-only">(current)</span></a></li>
     <li><a href="/dameagua">fountains</a></li>
   </ul>
+
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+      <% if current_admin.present? %>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-tint"></span></a>
+          <ul class="dropdown-menu" id="logout-drop">
+            <li>
+              <%= link_to 'logout', '/logout' %>
+            </li>
+      <% end %>
 
 </div>

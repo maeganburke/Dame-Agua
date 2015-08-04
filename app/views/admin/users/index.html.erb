@@ -1,11 +1,11 @@
-<div class = "container">
+<div class="container" id="index">
 		<div>
-
 			<h1>Current Dame Agua Users</h1>
-
+			<div id="divider-left"></div>
+			<b><p> name | username | email </p></b>
 			<% @users.each do  |user| %>
-				<p> <%= user.username %> | <%= user.email %> </p>
+				<p> <%= user.name %> | <%= user.username %> | <%= user.email %> </p>
 			<% end %>
-
 		</div>
+		<%= link_to 'create new user', new_admin_user_path %>
 </div>

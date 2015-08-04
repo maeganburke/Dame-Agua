@@ -7,4 +7,8 @@ class Admin < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
 
+  def show_username
+    [username].compact.join(" - ")
+  end
+
 end

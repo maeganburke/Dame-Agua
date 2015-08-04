@@ -1,15 +1,30 @@
 
-<div class = "container">
-	<h1>Log in</h1>
+<div id="admin-login">
+	<div class="container">
 
-	<%= form_tag('/admin/sessions', {:method => :post}) do%>
+		<% if current_admin.present? %>
+			<div id="admin-dash">
+				<h1>Admin Dash</h1>
+				<div class="divider-horizontal"></div>
+			</div>
+		<% else %>
+			<h1>Log in</h1>
+			<div class="divider-horizontal"></div>
 
-	  Username: <%= text_field_tag :username %>
-	  <br>
-	  Password: <%= password_field_tag :password %>
-	   <br>
+			<%= form_tag('/admin/sessions', {:method => :post}) do%>
 
-	  <%= submit_tag "sign in as admin" %>
+			  username:
+				<br>
+				<%= text_field_tag :username %>
+			  <br>
+			  password:
+				<br>
+				<%= password_field_tag :password %>
+			   <br>
+				<div class="divider-horizontal"></div>
+			  <%= submit_tag "sign in as admin", class: "signup-btn text-center" %>
 
-	<% end %>
+			<% end %>
+		<% end %>
+	</div>
 </div>

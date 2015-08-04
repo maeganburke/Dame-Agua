@@ -1,8 +1,24 @@
 class Admin::UsersController < ApplicationController
-  before_filter :admin_required
 
     def index
-      render :text => 'Hello from the admin panel!'
+      @users = User.all
+    end
+
+    def new
+      @user = User.new
+      if @user.valid?
+        @user.save
+      else
+        render :new
+      end
+    end
+
+    def create
+
+    end
+
+    def delete
+      @user = User.destroy
     end
 
 end
