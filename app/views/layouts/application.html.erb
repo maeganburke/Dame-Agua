@@ -32,23 +32,25 @@
       </button>
       <a class="navbar-brand" href="/" style="font-size: 20px; color: white">Dame Agua</a>
     </div>
-    <%= render partial: "layouts/navbar" %>
 
+    <% if current_admin.present? %>
+      <%= render partial: "layouts/adminnav" %>
+    <% else %>
+      <%= render partial: "layouts/navbar" %>
+    <% end %>
 
-  </div><!-- /.container-fluid -->
+  </div>
 </div>
 
-  <nav class="navbar navbar-default navbar-fixed-bottom" id="footer" style="min-height: 27px; color: white">
-    <div class="container">
-      <a href="http://www.thedopefactory.com" style="color: white">created by The Dope Factory.</a>
-    </div>
-  </nav>
+<% if current_admin.present? %>
+  <%= render partial: "layouts/adminfooter" %>
+<% else %>
+  <%= render partial: "layouts/footer" %>
+<% end %>
 
 <%= yield %>
 
   <!-- filepicker -->
   <%= filepicker_js_include_tag %>
-
-
 </body>
 </html>

@@ -1,3 +1,11 @@
+<!--
+<% if current_user.present? %>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    Yay, <strong><%= current_user.show_username %>!</strong> You're signed in! Now find some agua, homie.
+  </div>
+<% end %> -->
+
 <div id="find-agua" style="padding-top:0px">
 
   <% if current_user.present? %>
@@ -6,21 +14,30 @@
     <h1 id="dame-user"> hey, there! looking for agua?</h1>
   <% end %>
 
-  <br>
-  <form id="searchForm">
-    <input id="address" type="textbox" placeholder="enter address">
-    <input type="submit" value="search" class="searchsubmit">
-    <input type="button" value="use current location" class="searchsubmit" id="currentLocation">
-  </form>
+  <div class="container-fluid" id="aguaContainer">
+    <br>
+    <form id="searchForm">
+      <input id="address" type="textbox" placeholder="enter address">
+      <input type="submit" value="search" class="searchsubmit">
+      <input type="button" value="use current location" class="searchsubmit" id="currentLocation">
+      <button value="favorites" id="favorites">favorites<span class="glyphicon glyphicon-caret"></span></button>
+    </form>
 
-  <br>
+    <br>
 
-  <div id="map-canvas" style="width: 700px; height: 360px;"></div>
-
-
-  <br>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="fountain-modal">add a fountain</button>
+    <div id="map-canvas" style="width: 700px; height: 360px;"></div>
+    <div id="directionsPanel">
+      <div class="btn-group method-buttons" role="group" aria-label="...">
+        <button id="walk"><img src="/assets/walk.png"></button>
+        <button id="bike"><img src="/assets/bike.png"></button>
+        <button id="transit"><img src="/assets/transit.png"></button>
+        <button id="drive"><img src="/assets/drive.png"></button>
+      </div>
+    </div>
+    <br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="fountain-modal">add a fountain</button>
+  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

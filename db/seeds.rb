@@ -15,8 +15,10 @@ users_info.each do |user_info|
 	User.create!(user_info)
 end
 
+Admin.destroy_all
+
 admins_info =[
-	{email: 'maebo@gmail.com', password: 'admin', username: 'admin'}
+	{email: 'maegan.burke@gmail.com', password: 'admin', username: 'admin'}
 ]
 
 admins_info.each do |admin_info|

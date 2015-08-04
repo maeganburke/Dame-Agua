@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#delete'
 
-  get '/admin' => 'admin/sessions#create'
+  get '/admin' => 'admin/sessions#new'
   # get '/admin/logout' => 'admin/sessions#delete'
 
   namespace :admin do

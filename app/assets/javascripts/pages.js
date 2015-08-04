@@ -29,17 +29,50 @@ $(function(){
 $(function () {
 
   var geocoder;
+  var directionsDisplay;
+  var directionsService = new google.maps.DirectionsService();
   var map;
 
   function initialize() {
+    console.log("initialized google map");
+    directionsDisplay = new google.maps.DirectionsRenderer();
     geocoder = new google.maps.Geocoder();
     var Barcelona = new google.maps.LatLng(41.3917782, 2.1772809999999936);
     var mapOptions = {
-      zoom: 15,
+      zoom: 17,
       center: Barcelona
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
+          mapOptions); directionsDisplay.setMap(map); directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+
+    function calcRoute(fountain, method) {
+
+      console.log("calculating route...")
+      var methodType = google.maps.TravelMode.WALKING;
+      switch(method){
+        case "walk": {
+          methodType = google.maps.TravelMode.WALKING;
+          break;
+        }
+        case "drive": {
+          methodType = google.maps.TravelMode.DRIVING;
+          break;
+        }
+      }
+
+        var start = new google.maps.LatLng(localStorage.getItem("lat"), localStorage.getItem("lon"));
+        console.log(start);
+        var request = {
+          origin:start,
+          destination: fountain,
+          travelMode: methodType
+        };
+        directionsService.route(request, function(result, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(result);
+          }
+        });
+    }
 
     var layer = new google.maps.FusionTablesLayer({
         query: {
@@ -52,17 +85,24 @@ $(function () {
           }
         }]
     });
+
     layer.setMap(map);
+    google.maps.event.addListener(layer, 'click', function(event) {
+      var position = event.latLng;
+      calcRoute(position);
+    });
     currentLocation();
     $('#searchForm').on('submit', codeAddress);
     $('#currentLocation').on('click', currentLocation);
   }
 
   function currentLocation() {
+    console.log("hello from current location!");
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = new google.maps.LatLng(position.coords.latitude,
-                                         position.coords.longitude);
+        localStorage.setItem("lat", position.coords.latitude);
+        localStorage.setItem("lon", position.coords.longitude);
+        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
         var infowindow = new google.maps.InfoWindow({
           map: map,
@@ -100,6 +140,7 @@ $(function () {
   }
 
   function codeAddress(event) {
+    console.log("hello from codeAddress")
     event.preventDefault();
     var address = document.getElementById('address').value;
     geocoder.geocode( { 'address': address}, function(results, status) {
@@ -116,6 +157,7 @@ $(function () {
     });
   }
   google.maps.event.addDomListener(window, 'load', initialize);
+console.log("all done!")
 })
 
 

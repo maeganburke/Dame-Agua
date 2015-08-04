@@ -10,7 +10,34 @@ body {
   font-family: 'Quicksand', sans-serif;
   }
 
-#navbar {
+#adminnav {
+  background-color: #b81f00;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  border-bottom: 2px solid #005e66;
+}
+
+.admin.nav.navbar-nav.navbar-left li a {
+    color: white;
+}
+
+.admin.nav.navbar-nav.navbar-left li a:hover {
+  background-color: #005e66;
+  color: white;
+}
+
+.admin.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+
+.admin.nav.navbar-nav.navbar-right li a:hover {
+  background-color: #005e66;
+  color: white;
+}
+
+.user {
   background-color: #005e66;
   color: white;
   font-family: 'Quicksand', sans-serif;
@@ -19,20 +46,20 @@ body {
   border-bottom: 1px solid #b81f00;
 }
 
-.nav.navbar-nav.navbar-left li a {
+.user.nav.navbar-nav.navbar-left li a {
     color: white;
 }
 
-.nav.navbar-nav.navbar-left li a:hover {
+.user.nav.navbar-nav.navbar-left li a:hover {
   background-color: #b81f00;
   color: white;
 }
 
-.nav.navbar-nav.navbar-right li a {
+.user.nav.navbar-nav.navbar-right li a {
   color: white;
 }
 
-.nav.navbar-nav.navbar-right li a:hover {
+.user.nav.navbar-nav.navbar-right li a:hover {
   background-color: #b81f00;
   color: white;
 }
@@ -81,6 +108,21 @@ body {
 }
 
 #footer, .container {
+  padding-top: 2px;
+}
+
+#adminfooter {
+  text-align: center;
+  color: white;
+  // background-color: #242424;
+  background-color: #005e66;
+  // height: 10px;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+#adminfooter, .container {
   padding-top: 2px;
 }
 
@@ -158,7 +200,7 @@ img {
   height: 125px;
 }
 
-// find agua page
+// dame agua page
 #find-agua {
   padding: 0 30px;
 }
@@ -188,7 +230,6 @@ img {
   border: none;
   height: 30px;
   width: 200px;
-  border: none;
 }
 
 .searchsubmit:hover {
@@ -205,6 +246,45 @@ img {
 #map-canvas:hover {
   border: 1px #b81f00 solid;
   border-radius: 3px;
+}
+
+#favorites {
+  background-color: #b81f00;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 100px;
+  border-radius: 3px;
+}
+
+.method-buttons img {
+  height: 35px;
+}
+
+.method-buttons button {
+  background-color: #005e66;
+  border-radius: 3px;
+  border: none;
+}
+
+.method-buttons button:hover {
+  background-color: #b81f00;
+}
+
+#aguaContainer {
+  position: relative;
+  background-color: hsla(360, 61%, 100%, 0.76);
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
+
+#directionsPanel {
+  float: right;
+  width: 300px;
+  transform: translate(-150px) rotate(0deg);
+  position: absolute;
+  bottom: 60px;
+  left: 75%;
 }
 
 #fountain-submit {
