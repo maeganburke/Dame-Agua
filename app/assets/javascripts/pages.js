@@ -1,3 +1,31 @@
+// tapout
+$(function(){
+  $("#kilo").click(function(){
+    $('#result').empty();
+    $('#divider').empty();
+    var weight = document.getElementById("weight").value;
+    var weight = (weight * 2.20462);
+    console.log(weight);
+    var result = (weight / 2);
+    result = (result * 0.0295735);
+    result = +result.toFixed(2);
+    $('#result').append("It's suggested that you drink at least <b>" + result + "</b> liter(s) per day in order to #tapout!*");
+    $('#divider').append("<br> <div class='divider-horizontal'></div>")
+  });
+  $("#pounds").click(function(){
+    $('#result').empty();
+    $('#divider').empty();
+    var weight = document.getElementById("weight").value;
+    console.log(weight);
+    var result = (weight / 2);
+    result = (result * 0.0295735);
+    result = +result.toFixed(2);
+    $('#result').append("It's suggested that you drink at least <b>" + result + "</b> ounces per day in order to #tapout!*");
+    $('#divider').append("<br> <div class='divider-horizontal'></div>")
+  });
+});
+
+// dameagua
 $(function () {
 
   var geocoder;
@@ -87,6 +115,19 @@ $(function () {
       console.log(address);
     });
   }
-
   google.maps.event.addDomListener(window, 'load', initialize);
 })
+
+
+
+
+// $(function waterCalculator(event) {
+//   event.preventDefault();
+//   var weight = document.getElementById('weight').value;
+//   console.log(weight);
+//   function calculate(weight) {
+//     var result = (weight/2);
+//     $("#result").append(result);
+//   }
+//   $('#tapoutCalculator').on('submit', waterCalculator;
+// });

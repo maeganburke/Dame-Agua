@@ -153,6 +153,11 @@ body {
   margin-top: 35px;
 }
 
+// the deal
+img {
+  height: 125px;
+}
+
 // find agua page
 #find-agua {
   padding: 0 30px;
@@ -253,4 +258,53 @@ body {
 
 #bottle-modal:hover {
   background-color: #b81f00;
+}
+
+// tapout
+#tapoutCalculator {
+  text-align: center;
+}
+
+#kilo, #pounds {
+  background-color: #005e66;
+  color: white;
+  border: none;
+  width: 96px;
+  border-radius: 3px;
+  height: 35px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#kilo:hover, #pounds:hover {
+  background-color: #b81f00;
+  color: white;
+  border: none;
+}
+
+#weight {
+  width: 200px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  height: 45px;
+  font-size: 20px;
+  border: 1px solid #005e66;
+}
+
+#weight:hover {
+  border: 1px solid #b81f00;
+}
+
+#result {
+  font-size: 25px;
+  background-color: #005e66;
+  color: white;
+  margin-left: 10%;
+  width: 80%;
+  border-radius: 3px;
+}
+
+#info {
+  font-size: 40px;
 }
