@@ -12,6 +12,7 @@ class Admin::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.valid?
       @user.save
+      WelcomeMailer.welcome_email(@user).deliver_now
       redirect_to '/admin/users'
     else
       render :new
