@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
   # before_action :authorize_user, only: [:show]
-  before_action :admin_only, only: [:index]
-
   def new
     @user = User.new
     @home_locations =   [
@@ -28,6 +26,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(params[:username])
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to '/'
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 
 private

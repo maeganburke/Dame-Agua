@@ -1,8 +1,8 @@
-<div class="container" id="signup-form" style="margin-top: 0px;">
-	<h1>Create a New User</h1>
+<div class="container" id="edit-form" style="margin-top: 0px;">
+	<h1>Update User Profile</h1>
   <div class="divider-horizontal"></div>
 
-	<%= form_for @user, url: '/admin/users', method: 'post' do |f| %>
+	<%= form_for @user, url: edit_admin_user_path, method: 'get' do |f| %>
 
 	  name: <br> <%= f.text_field :name, class: "text-center" %>
 		<br>
@@ -20,7 +20,7 @@
 		</div>
 
     <div class="divider-horizontal"></div>
-	  <%= f.submit "dame agua", class: "signup-btn text-center" %>
+	  <%= f.submit "update user", class: "edit-user text-center" %>
 
 	<% end %>
 

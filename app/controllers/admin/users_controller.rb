@@ -1,24 +1,45 @@
 class Admin::UsersController < ApplicationController
 
-    def index
-      @users = User.all
+  def index
+    @users = User.all
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    if @user.valid?
+      @user.save
+      redirect_to '/admin/users'
+    else
+      render :new
     end
+  end
 
-    def new
-      @user = User.new
-      if @user.valid?
-        @user.save
-      else
-        render :new
-      end
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to '/admin/users'
+    else
+      render :edit
     end
+  end
 
-    def create
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to '/admin/users'
+  end
 
-    end
+private
 
-    def delete
-      @user = User.destroy
-    end
-
+  def user_params
+    params.require(:user).permit(:name, :username, :email, :home_location, :password, :password_confirmation)
+  end
 end

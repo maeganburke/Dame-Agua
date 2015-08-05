@@ -5,9 +5,10 @@
   margin: 5px 0;
 }
 
-.container input:hover {
+#signup-form input:hover {
   background-color: black;
   color: white;
+  border: none;
 }
 
 #admin-login {
@@ -19,7 +20,7 @@
   border-radius: 3px;
 }
 
-#admin-login h1 {
+.container h1 {
   font-weight: 500;
   font-size: 30px;
 }

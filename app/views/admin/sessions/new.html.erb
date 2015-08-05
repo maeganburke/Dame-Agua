@@ -8,23 +8,7 @@
 				<div class="divider-horizontal"></div>
 			</div>
 		<% else %>
-			<h1>Log in</h1>
-			<div class="divider-horizontal"></div>
-
-			<%= form_tag('/admin/sessions', {:method => :post}) do%>
-
-			  username:
-				<br>
-				<%= text_field_tag :username %>
-			  <br>
-			  password:
-				<br>
-				<%= password_field_tag :password %>
-			   <br>
-				<div class="divider-horizontal"></div>
-			  <%= submit_tag "sign in as admin", class: "signup-btn text-center" %>
-
-			<% end %>
+			<%= render partial: "admin/sessions/adminlogin" %>
 		<% end %>
 	</div>
 </div>
