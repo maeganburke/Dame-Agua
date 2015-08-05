@@ -5,7 +5,7 @@ body {
   padding-bottom: 60px;
   background-color: #ededed;
   font-family: 'Quicksand', sans-serif;
-  }
+}
 
 .btn {
   transition: 1s all;
@@ -108,15 +108,13 @@ input {
 }
 
 // homepage
-.jumbotron {
+#jumbo-home {
   text-align: center;
   height: 200px;
   background-color: #002124;
   color: white;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  margin-top: 15px;
-  padding-top: 12px;
   padding-bottom: 10px;
 }
 
@@ -185,6 +183,7 @@ img {
 // dame agua page
 #find-agua {
   padding: 0 30px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #dame-user {
