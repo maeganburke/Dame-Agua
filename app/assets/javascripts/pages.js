@@ -32,6 +32,7 @@ $(function () {
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();
   var map;
+  var currentFountain;
 
   function initialize() {
     console.log("initialized google map");
@@ -47,21 +48,30 @@ $(function () {
 
     function calcRoute(fountain, method) {
 
-      console.log("calculating route...")
-      var methodType = google.maps.TravelMode.WALKING;
-      switch(method){
-        case "walk": {
-          methodType = google.maps.TravelMode.WALKING;
-          break;
-        }
-        case "drive": {
-          methodType = google.maps.TravelMode.DRIVING;
-          break;
-        }
-      }
-
         var start = new google.maps.LatLng(localStorage.getItem("lat"), localStorage.getItem("lon"));
         console.log(start);
+        console.log("calculating route...");
+        console.log(method);
+        var methodType = google.maps.TravelMode.WALKING;
+        switch(method){
+          case "walk": {
+            methodType = google.maps.TravelMode.WALKING;
+            break;
+          }
+          case "drive": {
+            methodType = google.maps.TravelMode.DRIVING;
+            break;
+          }
+          case "transit": {
+            methodType = google.maps.TravelMode.TRANSIT;
+            break;
+          }
+          case "bike": {
+            methodType = google.maps.TravelMode.BIKE;
+            break;
+          }
+        }
+
         var request = {
           origin:start,
           destination: fountain,
@@ -73,6 +83,11 @@ $(function () {
           }
         });
     }
+    $('.route-calculator').on('click', function(event){
+      console.log($(event.target));
+      console.log($(event.target).data('meth'));
+      calcRoute(currentFountain, $(event.target).data('meth'));
+    })
 
     var layer = new google.maps.FusionTablesLayer({
         query: {
@@ -89,6 +104,7 @@ $(function () {
     layer.setMap(map);
     google.maps.event.addListener(layer, 'click', function(event) {
       var position = event.latLng;
+      currentFountain = position;
       calcRoute(position);
     });
     currentLocation();
@@ -159,17 +175,3 @@ $(function () {
   google.maps.event.addDomListener(window, 'load', initialize);
 console.log("all done!")
 })
-
-
-
-
-// $(function waterCalculator(event) {
-//   event.preventDefault();
-//   var weight = document.getElementById('weight').value;
-//   console.log(weight);
-//   function calculate(weight) {
-//     var result = (weight/2);
-//     $("#result").append(result);
-//   }
-//   $('#tapoutCalculator').on('submit', waterCalculator;
-// });
