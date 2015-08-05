@@ -1,5 +1,6 @@
 class FountainComment < ActiveRecord::Base
 
-  belongs_to :users :fountains
-  
+  belongs_to :users
+  belongs_to :fountains
+
 end
