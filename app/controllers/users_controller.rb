@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authorize_user, only: [:show]
+
   def new
     @user = User.new
     @home_locations =   [
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.valid?
       @user.save
       session[:user_id] = @user.id
-      WelcomeMailer.welcome_email(@user).deliver_now
+      # WelcomeMailer.welcome_email(@user).deliver_now
       redirect_to '/'
     else
       render :new
