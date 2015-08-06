@@ -176,4 +176,8 @@ $(".pages.dameagua").ready(function () {
 console.log("all done!")
 })
 
+// bootstrap
 $('body').scrollspy({ target: '#dame-navbar' })
+$('.carousel').carousel({
+  interval: 2000
+})

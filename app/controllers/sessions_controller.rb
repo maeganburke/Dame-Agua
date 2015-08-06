@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def delete
     session.clear
-    redirect_to '/'
+    redirect_to dameagua_path
   end
 
 

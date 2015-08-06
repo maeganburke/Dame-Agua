@@ -1,51 +1,59 @@
-<!-- <div class="container">
-  <% if flash[:notice] %>
-    <div class="notice alert alert-warning alert-dismissible" role="alert" style="margin-top: 10px"><%= flash[:notice] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-  <% end %>
 
-  <% if flash[:alert] %>
-    <div class="alert alert alert-success" style="margin-top: 10px"><%= flash[:alert] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-  <% end %>
-</div> -->
+<div id="my-carousel" class="carousel slide row" style="bottom: 30px;">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#my-carousel" data-slide-to="1"></li>
+    <li data-target="#my-carousel" data-slide-to="2"></li>
+    <li data-target="#my-carousel" data-slide-to="3"></li>
+  </ol>
 
-<div class="row" id="home-container">
-  <a href="#thedeal">
-    <div class="col-md-3" id="deal-row" style="padding: 0; position:relative;">
-      <div class="col-overlay" style="position:absolute; top:0; left: 0; right: 0; bottom: 0; background-color:white; opacity: .4;"></div>
-      <div class="container home-row-text" style="margin-right: 0px;position:absolute;">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" >
+    <div class="item active" id="deal-item">
+      <div class="overlay"></div>
+      <img src="/assets/thedeal.jpg" style="height: 100%; width: 100%;" />
+      <div class="carousel-caption" style="color: white;">
         <h1>the deal.</h1>
-        <p>Learn what's happening to the earth and simple ways that you can help.</p>
+        <p>We're here to help you understand the environmental impact of global overconsumption, all while staying hydrated.</p>
       </div>
     </div>
-  </a>
 
-  <a href="#dameagua">
-    <div class="col-md-3" id="dame-row" style="padding: 0; position:relative;">
-      <div class="col-overlay" style="position:absolute; top:0; left: 0; right: 0; bottom: 0; background-color:white; opacity: .4;"></div>
-      <div class="container home-row-text" style="margin-right: 0px;position:absolute;">
+    <div class="item" id="agua-item">
+      <div class="overlay"></div>
+      <img src="/assets/findagua.jpg" style="height: 100%; width: 100%;" />
+      <div class="carousel-caption" style="color: black;">
         <h1>find agua.</h1>
         <p>Thirsty, but on the run? Say no to plastic and let us help you find a free water source.</p>
       </div>
     </div>
-  </a>
 
-  <a href="#findbottles">
-    <div class="col-md-3" id="find-row" style="padding: 0; position:relative;">
-      <div class="col-overlay" style="position:absolute; top:0; left: 0; right: 0; bottom: 0; background-color:white; opacity: .4;"></div>
-      <div class="container home-row-text" style="margin-right: 0px;position:absolute;">
+    <div class="item" id="bottles-item">
+      <div class="overlay"></div>
+      <img src="/assets/bottle.jpg" style="height: 100%; width: 100%;" />
+      <div class="carousel-caption" style="color: black;">
         <h1>find bottles.</h1>
         <p>The bottle is as important as the agua. We have options for any budget.</p>
       </div>
     </div>
-  </a>
 
-  <a href="#tapout">
-    <div class="col-md-3" id="tapout-row" style="padding: 0; position:relative;">
-      <div class="col-overlay" style="position:absolute; top:0; left: 0; right: 0; bottom: 0; background-color:white; opacity: .4;"></div>
-      <div class="container home-row-text" style="margin-right: 0px; position:absolute;">
+    <div class="item" id="tapout-item">
+      <div class="overlay"></div>
+      <img src="/assets/tapout.jpg" style="height: 100%; width: 100%;" id="tapout-img"/>
+      <div class="carousel-caption" style="color: black;">
         <h1>tap out.</h1>
         <p>The earth needs water and so do you! Get some tips on how you can stay hydrated.</p>
       </div>
     </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">previous</span>
+  </a>
+  <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">next</span>
   </a>
 </div>
