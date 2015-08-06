@@ -1,28 +1,26 @@
-<div class="container" id="signup-form" style="margin-top: 0px;">
+<div class="container" id="edit-form" style="margin-top: 0px;">
 	<br>
 	<% if flash[:notice] %>
 		<div class="notice alert alert-danger alert-dismissible" role="alert"><%= flash[:notice] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
 	<% end %>
-
 	<div class="row">
-		<div class="col-md-4" id="signup-h">
-			<h1>Sign Up for Dame Agua</h1>
+		<div class="col-md-4" id="edit-h">
+			<h1>Update Your Profile</h1>
 		</div>
-	  <div class="divider-vertical" id="signup-vertical"></div>
 
+	  <div class="divider-vertical" id="edit-vertical"></div>
 		<div class="col-md-4">
-			<%= form_for @user, url: '/' do |f| %>
+			<%= form_for @user, url: profile_edit_path, method: 'get' do |f| %>
 
 			  name: <br> <%= f.text_field :name, class: "text-center" %>
-			  <br>
+				<br>
 			  email: <br> <%= f.text_field :email, class: "text-center" %>
-			  <br>
+				<br>
 		    username:  <br> <%= f.text_field :username, class: "text-center" %>
-			  <br>
+				<br>
 			  password: <br> <%= f.password_field :password, class: "text-center" %>
-			  <br>
-			  confirm password: <br> <%= f.password_field :password_confirmation, class: "text-center" %>
-			  <br>
+				<br>
+			  password confirmation: <br> <%= f.password_field :password_confirmation, class: "text-center" %>
 
 				<div>
 					<%= f.label :filepicker_url, "upload an avi" %> <br>
@@ -30,7 +28,7 @@
 				</div>
 
 		    <div class="divider-horizontal"></div>
-			  <%= f.submit "dame agua", class: "signup-btn text-center" %>
+			  <%= f.submit "update", class: "edit-btn text-center" %>
 
 			<% end %>
 		</div>

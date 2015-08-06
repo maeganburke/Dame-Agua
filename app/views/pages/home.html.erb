@@ -1,3 +1,13 @@
+<div class="container">
+  <% if flash[:notice] %>
+    <div class="notice alert alert-warning alert-dismissible" role="alert" style="margin-top: 10px"><%= flash[:notice] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div class="alert alert alert-success" style="margin-top: 10px"><%= flash[:alert] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+  <% end %>
+</div>
+
 <div class="jumbotron" id="jumbo-home" style="margin-top: 30px;margin-bottom: 25px; padding-top: 11px;">
   <div class="container">
     <h1 style="padding: 0px; margin: 0px">Dame Agua</h1>
