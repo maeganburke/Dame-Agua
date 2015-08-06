@@ -29,10 +29,14 @@ a {
   text-align: center;
   padding-right: 10px;
   a:hover {
-    color: black;
+    background-color: #000085;
+    color: white;
   }
 }
 
+.form-group {
+  transition: 1s all;
+}
 .form-group input, #signin-password {
   margin-bottom: 5px;
   font-size: 19px;
@@ -43,28 +47,17 @@ a {
   color: white;
 }
 
-
 #btn-submit {
   background-color: #000085;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
-
-// #btn-submit:hover {
-//   background-color: black;
-//   color: white;
-// }
 
 #btn-help {
-  background-color: gray;
+  background-color: #2b2b2b;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
-
-// #btn-help:hover {
-//   background-color: black;
-//   color: white;
-// }
 
 // homepage/dameagua/
 .carousel {
