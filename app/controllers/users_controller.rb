@@ -15,9 +15,11 @@ class UsersController < ApplicationController
       @user.save
       session[:user_id] = @user.id
       # WelcomeMailer.welcome_email(@user).deliver_now
+      flash[:alert] = "Welcome to Dame Agua!"
       redirect_to '/'
     else
-      render :new
+      flash[:notice] = "Oops! It looks like there was an error. Try again, homie!"
+      redirect_to signup_path
     end
   end
 
@@ -36,7 +38,18 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find_by(params[:user_id])
+  end
+
+  def update
+    @user = User.find_by(params[:user_id])
+    fail
+    if @user.update_attributes(user_params)
+      redirect_to '/'
+    else
+      flash[:notice] = "Oops! It looks like there was an error. Try again, homie!"
+      redirect_to profile_path
+    end
   end
 
 private
