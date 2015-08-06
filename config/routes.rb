@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   get '/users' => 'users#index'
   get '/signup' => 'users#new'
   post '/' => 'users#create'
+
   get '/profile' => 'users#show'
+  get '/profile/edit' => 'users#edit', as: :profile_edit
+  post '/profile' => 'users#update', as: :profile_update
 
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#delete'

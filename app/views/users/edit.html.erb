@@ -10,7 +10,7 @@
 
 	  <div class="divider-vertical" id="edit-vertical"></div>
 		<div class="col-md-4">
-			<%= form_for @user, url: profile_edit_path, method: 'get' do |f| %>
+			<%= form_for @user, url: profile_update_path, method: 'post' do |f| %>
 
 			  name: <br> <%= f.text_field :name, class: "text-center" %>
 				<br>

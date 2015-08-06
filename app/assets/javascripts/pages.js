@@ -175,3 +175,5 @@ $(".pages.dameagua").ready(function () {
   google.maps.event.addDomListener(window, 'load', initialize);
 console.log("all done!")
 })
+
+$('body').scrollspy({ target: '#dame-navbar' })

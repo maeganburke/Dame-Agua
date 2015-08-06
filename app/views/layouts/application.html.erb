@@ -17,23 +17,36 @@
 
 </head>
 
-<body data-spy="scroll" data-target="navbar" class="<%= controller_name %> <%= action_name %>" style="background-color: #ededed; font-family: 'Quicksand', sans-serif !important;">
+<body data-spy="scroll" data-target="#dame-navbar" class="<%= controller_name %> <%= action_name %>" style="background-color: #ededed; font-family: 'Quicksand', sans-serif !important;">
 
-
-    <% if current_admin.present? %>
-      <%= render partial: "layouts/adminnav" %>
-    <% else %>
-      <%= render partial: "layouts/navbar" %>
-    <% end %>
-
+  <div class="navbar-fixed-bottom" id="dame-navbar">
+    <ul class="nav nav-tabs" role="tablist">
+      <li><a href="/dameagua">Dame Agua<span class="sr-only">(current)</span></a></li>
+      <li><a href="#home">overview <span class="sr-only">(current)</span></a></li>
+      <li><a href="#thedeal">what's the deal? <span class="sr-only">(current)</span></a></li>
+      <li><a href="#dameagua">find agua <span class="sr-only">(current)</span></a></a></li>
+      <li><a href="#findbottles">find a bottle <span class="sr-only">(current)</span></a></a></li>
+      <li><a href="#tapout">#tapout <span class="sr-only">(current)</span></a></a></li>
+    </ul>
   </div>
-</div>
 
-<% if current_admin.present? %>
-  <%= render partial: "layouts/adminfooter" %>
-<% else %>
-  <%= render partial: "layouts/footer" %>
-<% end %>
+  <div class="container-fluid content">
+     <div id="home">
+         <%= render partial: "pages/home" %>
+     </div>
+     <div id="thedeal">
+         <%= render partial: "pages/thedeal" %>
+     </div>
+     <div id="dameagua">
+         You better stay away from bears, they are bad news.
+     </div>
+     <div id="findbottles">
+         <%= render partial: "pages/findbottles" %>
+     </div>
+     <div id="tapout">
+       <%= render partial: "pages/tapout" %>
+     </div>
+    </div>
 
 <%= yield %>
 

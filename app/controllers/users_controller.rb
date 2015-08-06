@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(params[:username])
+    @user = User.find_by(username: params[:username])
   end
 
   def destroy
@@ -38,12 +38,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by(params[:user_id])
+    @user = User.find(session[:user_id])
   end
 
   def update
-    @user = User.find_by(params[:user_id])
-    fail
+    @user = User.find(session[:user_id])
     if @user.update_attributes(user_params)
       redirect_to '/'
     else
