@@ -9,8 +9,8 @@ $(function(){
     var result = (weight / 2);
     result = (result * 0.0295735);
     result = +result.toFixed(2);
+    $('#but').append("*we're not your mama, nor are we doctors so don't hold us to this")
     $('#result').append("It's suggested that you drink at least <b>" + result + "</b> liter(s) per day in order to #tapout!*");
-    $('#divider').append("<br> <div class='divider-horizontal'></div>")
   });
   $("#pounds").click(function(){
     $('#result').empty();
@@ -18,10 +18,9 @@ $(function(){
     var weight = document.getElementById("weight").value;
     console.log(weight);
     var result = (weight / 2);
-    result = (result * 0.0295735);
     result = +result.toFixed(2);
     $('#result').append("It's suggested that you drink at least <b>" + result + "</b> ounces per day in order to #tapout!*");
-    $('#divider').append("<br> <div class='divider-horizontal'></div>")
+    $('#but').append("*we're not your mama, nor are we doctors so don't hold us to this")
   });
 });
 

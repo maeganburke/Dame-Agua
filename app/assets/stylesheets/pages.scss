@@ -1,12 +1,25 @@
 // // sitewide
+html {
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 * {
   transition: 1s all;
   font-family: 'Quicksand', sans-serif;
 }
+
 body {
   position: relative;
   padding-top: 0px;
   transition: 1s all;
+}
+
+#whole-page {
+  background-color: #c2c2ff;
 }
 
 .btn {
@@ -32,6 +45,15 @@ a {
     background-color: #000085;
     color: white;
   }
+}
+
+.nav-tabs{
+  text-align: center;
+}
+
+.nav-tabs > li.active > a {
+  background-color: #000085 !important;
+  color: white !important;
 }
 
 .form-group {
@@ -83,7 +105,6 @@ a {
   bottom: 40%;
   top: 54%;
   transform: translateY(-50%);
-  bottom: initial;
 }
 
 .overlay {
@@ -121,6 +142,17 @@ a {
   height: 100vh;
 }
 
+.method-buttons {
+  img {
+    height: 30px;
+    width: 70px;
+  }
+}
+
+#map-canvas {
+  background-color: red;
+}
+
 // findbottles
 #find-bottles {
   height: 100vh;
@@ -129,4 +161,49 @@ a {
 // tapout
 #tapout {
   height: 100vh;
+  background-color: #c2c2ff;
+  text-align: center;
+}
+
+.wrapper {
+  top: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 25px;
+  height: 100%;
+}
+
+#tapoutCalculator {
+  top: 35%;
+  h1 {
+    font-size: 30px;
+    color: #000085;
+  }
+}
+
+#tapout-content {
+  margin-top: 80px;
+  text-align: center;
+  height: 70%;
+  border-right: 1px solid gray;
+  h3 {
+    color: #000085;
+  }
+}
+
+#tapout-buttons {
+left: 20px;
+}
+
+#kilo, #pounds {
+  background-color: #000085;
+  color: white;
+  font-size: 16px;
+  width: 134px;
+
+}
+
+#but {
+  font-size: 14px;
 }
