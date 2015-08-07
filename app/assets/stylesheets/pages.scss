@@ -135,24 +135,98 @@ a {
 // thedeal
 #the-deal {
   height: 100vh;
+  margin-top: 0px;
+}
+
+#deal-wrapper {
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  font-size: 27px;
+  span {
+    color: #000085;
+  }
+  h1 {
+    font-size: 37px;
+  }
+}
+
+.divider-horizontal {
+  border-bottom: 1px solid black;
 }
 
 // findagua
+#aguaContainer {
+  height: 100vh;
+  text-align: center;
+}
+
 #find-agua {
   height: 100vh;
 }
 
 .method-buttons {
+  margin-top: 7px;
+  margin-bottom: 1px;
   img {
-    height: 30px;
-    width: 70px;
+    height: 34px;
+    padding: 1px 0;
+  }
+  button {
+    width: 170px;
+    height: 45px;
+    background-color: #000085;
+    border: none;
+    border-radius: 3px;
+  }
+  button:hover {
+    background-color: #2b2b2b;
+    color: white;
   }
 }
 
 #map-canvas {
-  background-color: red;
+  left: 19%;
 }
 
+#address {
+  width: 440px;
+}
+
+.searchsubmit {
+  background-color: #000085;
+  color: white;
+  font-size: 16px;
+  height: 38px;
+}
+
+.searchsubmit:hover {
+  width: 100px;
+}
+
+#currentLocation {
+  background-color: #2b2b2b;
+  color: white;
+  font-size: 16px;
+  height: 38px;
+}
+
+#currentLocation:hover {
+  width: 200px;
+}
+
+#directionsPanel {
+  text-align: center;
+  margin-top:10px;
+  max-height: 250px;
+  overflow-y: scroll;
+  font-size: 17px;
+  max-width: 520px;
+  left: 19%;
+
+  transform: translate(300px,-10px);
+}
 // findbottles
 #find-bottles {
   height: 100vh;
@@ -161,7 +235,6 @@ a {
 // tapout
 #tapout {
   height: 100vh;
-  background-color: #c2c2ff;
   text-align: center;
 }
 

@@ -1,4 +1,16 @@
 <div class="container" id="the-deal" style="padding-top: 0">
-  <div class="wrapper">
+  <div class="wrapper" id="deal-wrapper">
+    <% if flash[:notice] %>
+      <div class="notice alert alert-success alert-dismissible" role="alert"><%= flash[:notice] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+    <% end %>
+    <div id"deal-content">
+      <h1><span>the deal.</span></h1>
+      <div "divider-horizontal"></div><hr>
+      <p><b>Americans</b> use about <span><b>50 billion</b></span> plastic bottles per year. With a recycling rate of only 23 percent, <span><b>38 billion</b></span> plastic bottles are wasted per year.</p>
+      <br>
+      <p>This Ironhack cohort used, on average, <b>50</b> plastic water bottles a week.</p>
+      <br>
+      <p><span><b>That's 400 plastic bottles, homie.</b></span></p>
+    </div>
   </div>
 </div>

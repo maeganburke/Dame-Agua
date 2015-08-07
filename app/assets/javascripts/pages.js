@@ -25,7 +25,7 @@ $(function(){
 });
 
 // dameagua
-$(".pages.dameagua").ready(function () {
+$(".pages.home").ready(function () {
 
   var geocoder;
   var directionsDisplay;
@@ -66,7 +66,7 @@ $(".pages.dameagua").ready(function () {
             break;
           }
           case "bike": {
-            methodType = google.maps.TravelMode.BIKE;
+            methodType = google.maps.TravelMode.BICYCLING;  
             break;
           }
         }
@@ -79,13 +79,17 @@ $(".pages.dameagua").ready(function () {
         directionsService.route(request, function(result, status) {
           if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(result);
+          } else {
+            console.log("no directions available");
           }
         });
-    }
+    };
+
     $('.route-calculator').on('click', function(event){
-      console.log($(event.target));
-      console.log($(event.target).data('meth'));
-      calcRoute(currentFountain, $(event.target).data('meth'));
+      console.log("this is the event target... ")
+      var method = $(event.target).find("img").data('meth')
+      console.log(method);
+      calcRoute(currentFountain, method);
     })
 
     var layer = new google.maps.FusionTablesLayer({
