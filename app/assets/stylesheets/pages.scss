@@ -8,7 +8,6 @@ html {
 }
 
 * {
-  transition: 1s all;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -16,6 +15,7 @@ body {
   position: relative;
   padding-top: 0px;
   transition: 1s all;
+  height: 100%;
 }
 
 #whole-page {
@@ -51,8 +51,23 @@ a {
   text-align: center;
 }
 
+.nav-tabs > li > a {
+  color: #000085;
+}
+
 .nav-tabs > li.active > a {
   background-color: #000085 !important;
+  color: white !important;
+}
+
+.dropdown-menu > li > a {
+  background-color: white;
+  text-align: center;
+  color: #000085 !important;
+  font-size: 18px;
+}
+
+.dropdown-menu > li:hover > a {
   color: white !important;
 }
 
@@ -188,6 +203,7 @@ a {
 
 #map-canvas {
   left: 19%;
+  transition: none;
 }
 
 #address {
@@ -258,7 +274,7 @@ a {
 #tapout-content {
   margin-top: 40px;
   text-align: center;
-  height: 70%;
+  height: 90%;
   border-right: 1px solid gray;
   h3, span {
     color: #000085;

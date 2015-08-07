@@ -1,11 +1,11 @@
 <div id="whole-page">
-<div id="my-carousel" class="carousel slide row" style="bottom: 30px;">
+<div id="my-carousel" class="carousel slide row">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#my-carousel" data-slide-to="1"></li>
     <li data-target="#my-carousel" data-slide-to="2"></li>
-    <li data-target="#my-carousel" data-slide-to="3"></li>
+    <!-- <li data-target="#my-carousel" data-slide-to="3"></li> -->
   </ol>
 
   <!-- Wrapper for slides -->
@@ -65,13 +65,13 @@
   </a>
 </div>
 
-<div data-spy="scroll" data-target="#dame-navbar">
+<div class="scroll" data-spy="scroll" data-target="#dame-navbar" style="position:relative; height: 100%; overflow-y: scroll;">
   <div class="navbar-fixed-bottom" id="dame-navbar">
-    <ul class="nav navbar-nav nav-tabs list-unstyled navbar-right" role="tablist" style="border: none;">
-      <li><a href="#thedeal">the deal<span class="sr-only">(current)</span></a></li>
-      <li><a href="#dameagua">find agua <span class="sr-only">(current)</span></a></a></li>
+    <ul class="nav navbar-nav nav-tabs list-unstyled navbar-right" role="tablist" style="border: none; color: #000085">
+      <li><a href="#thedeal">the deal</a></li>
+      <li><a href="#dameagua">find agua</a></li>
       <!-- <li><a href="#findbottles">find bottles <span class="sr-only">(current)</span></a></a></li> -->
-      <li><a href="#tapout">tap out <span class="sr-only">(current)</span></a></a></li>
+      <li><a href="#tapout">tap out</a></li>
     </ul>
 
     <ul class="user nav navbar-nav nav-tabs navbar-left" id="navbar" style="color:white">
@@ -79,7 +79,7 @@
         <% if current_user.present? %>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-tint"</a>
             <ul class="dropdown-menu" id="logout-drop">
-              <li>
+              <li style="padding: 0">
                 <%= link_to 'profile', profile_path %>
                 <%= link_to 'logout', logout_path %>
               </li>

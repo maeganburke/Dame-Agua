@@ -66,7 +66,7 @@ $(".pages.home").ready(function () {
             break;
           }
           case "bike": {
-            methodType = google.maps.TravelMode.BICYCLING;  
+            methodType = google.maps.TravelMode.WALKING;
             break;
           }
         }
@@ -180,7 +180,6 @@ console.log("all done!")
 })
 
 // bootstrap
-$('body').scrollspy({ target: '#dame-navbar' })
 $('.carousel').carousel({
   interval: 2000
 })
