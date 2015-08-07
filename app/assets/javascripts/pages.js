@@ -25,7 +25,7 @@ $(function(){
 });
 
 // dameagua
-$(".pages.home").ready(function () {
+$("body").ready(function () {
 
   var geocoder;
   var directionsDisplay;
