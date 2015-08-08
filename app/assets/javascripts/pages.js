@@ -180,6 +180,9 @@ console.log("all done!")
 })
 
 // bootstrap
-$('.carousel').carousel({
-  interval: 2000
-})
+$(function(){
+    $('.carousel').carousel({
+      interval: 4000,
+      pause: "hover"
+    });
+});

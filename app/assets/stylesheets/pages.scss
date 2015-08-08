@@ -38,6 +38,38 @@ a {
   transition: 1s all;
 }
 
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
 // navbar
 #dame-navbar {
   background-color: white;
@@ -69,6 +101,7 @@ a {
   text-align: center;
   color: #000085 !important;
   font-size: 18px;
+  transition: 3s all;
 }
 
 .dropdown-menu > li:hover > a {
