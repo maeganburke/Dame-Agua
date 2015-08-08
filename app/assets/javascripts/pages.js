@@ -67,6 +67,7 @@ $("body").ready(function () {
           }
           case "bike": {
             methodType = google.maps.TravelMode.WALKING;
+            
             break;
           }
         }

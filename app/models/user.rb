@@ -19,19 +19,19 @@ class User < ActiveRecord::Base
 	end
 
   def show_username
-    [username].compact.join(" - ")
+    [username].compact.join(" - ").downcase
   end
 
   def show_name
-    [name].compact.join(" - ")
+    [name].compact.join(" - ").downcase
   end
 
   def show_email
-    [email].compact.join(" - ")
+    [email].compact.join(" - ").downcase
   end
 
   def show_home
-    [home_location].compact.join(" - ")
+    [home_location].compact.join(" - ").downcase
   end
 
 end

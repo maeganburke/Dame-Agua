@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       flash[:alert] = "welcome to dame agua!"
       redirect_to '#thedeal'
     else
-      flash[:notice] = "Oops! It looks like there was an error. Try again, homie!"
+      flash[:notice] = "oops! it looks like there was an error. try again, homie!"
       redirect_to signup_path
     end
   end
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       redirect_to '/'
     else
-      flash[:notice] = "Oops! It looks like there was an error. Try again, homie!"
+      flash[:notice] = "oops! tt looks like there was an error. try again, homie!"
       redirect_to profile_path
     end
   end

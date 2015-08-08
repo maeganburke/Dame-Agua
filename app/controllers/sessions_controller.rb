@@ -7,10 +7,10 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      flash[:notice] = "Get excited! You've successfully signed in."
+      flash[:notice] = "get excited! you've successfully signed in."
       redirect_to '#thedeal'
     else
-      flash[:notice] = "Oopsies! Something went wrong. You sure that's your password?"
+      flash[:notice] = "oopsies! something went wrong. you sure that's your password?"
       redirect_to '/'
     end
   end
