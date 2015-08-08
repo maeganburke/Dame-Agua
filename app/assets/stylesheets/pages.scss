@@ -22,12 +22,16 @@ body {
   background-color: #ebebff;
 }
 
-.btn {
+button {
   transition: 1s all;
+  border-radius: 3px;
+  border: none;
 }
 
 input {
   transition: 1s all;
+  border-radius: 3px;
+  border: none;
 }
 
 a {
@@ -167,18 +171,31 @@ a {
   }
 }
 
-.divider-horizontal {
-  border-bottom: 1px solid black;
-}
-
 // findagua
 #aguaContainer {
   height: 100vh;
   text-align: center;
+  padding: 0;
 }
 
 #find-agua {
   height: 100vh;
+}
+
+#searchForm {
+  width: 1140px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+#address {
+  width: 700px;
+  text-align: center;
+  border: none;
+}
+
+#address:hover {
+  border: 2px solid #000085;
 }
 
 .method-buttons {
@@ -189,7 +206,7 @@ a {
     padding: 1px 0;
   }
   button {
-    width: 170px;
+    width: 250px;
     height: 45px;
     background-color: #000085;
     border: none;
@@ -201,16 +218,8 @@ a {
   }
 }
 
-#map-canvas {
-  left: 19%;
-  transition: none;
-}
-
-#address {
-  width: 440px;
-}
-
 .searchsubmit {
+  width: 210px;
   background-color: #000085;
   color: white;
   font-size: 16px;
@@ -218,7 +227,7 @@ a {
 }
 
 .searchsubmit:hover {
-  width: 100px;
+  // width: 100px;
 }
 
 #currentLocation {
@@ -226,10 +235,16 @@ a {
   color: white;
   font-size: 16px;
   height: 38px;
+  width: 210px;
 }
 
 #currentLocation:hover {
   width: 200px;
+}
+
+#map-canvas {
+  text-align: center;
+  transition: none;
 }
 
 #directionsPanel {
@@ -256,7 +271,7 @@ a {
 
 .wrapper {
   top: 30px;
-  text-align: center;
+  // text-align: center;
   background-color: white;
   border-radius: 3px;
   font-size: 25px;

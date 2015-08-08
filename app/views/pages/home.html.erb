@@ -22,7 +22,7 @@
 
     <div class="item" id="agua-item">
       <div class="overlay"></div>
-      <a href="#findagua">
+      <a href="#dameagua">
         <img src="/assets/findagua.jpg" style="height: 100%; width: 100%;" />
         <div class="carousel-caption" style="color: black;">
           <h1>find agua.</h1>
@@ -65,54 +65,15 @@
   </a>
 </div>
 
-<div>
-  <div class="navbar-fixed-bottom" id="dame-navbar">
-    <ul class="nav navbar-nav nav-tabs list-unstyled navbar-right" role="tablist" style="border: none; color: #000085">
-      <li><a href="#thedeal">the deal</a></li>
-      <li><a href="#dameagua">find agua</a></li>
-      <!-- <li><a href="#findbottles">find bottles <span class="sr-only">(current)</span></a></a></li> -->
-      <li><a href="#tapout">tap out</a></li>
-    </ul>
-
-    <ul class="user nav navbar-nav nav-tabs navbar-left" id="navbar" style="color:white">
-      <li class="dropdown">
-        <% if current_user.present? %>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-tint"</a>
-            <ul class="dropdown-menu" id="logout-drop">
-              <li style="padding: 0">
-                <%= link_to 'profile', profile_path %>
-                <%= link_to 'logout', logout_path %>
-              </li>
-        <% else %>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">login</a>
-          <ul class="dropdown-menu">
-            <li>
-              <%= form_tag "/login", class: "navbar-form navbar-left", role: "signin", id: "signin-form" do %>
-                <div class="form-group">
-                  <%= text_field_tag :username, nil, class: "form-control text-center", placeholder: "username" %>
-                  <%= password_field_tag :password, nil, class: "form-control text-center", placeholder: "password", id: "signin-password" %>
-
-                </div>
-                <%= button_tag "get agua", class: "btn-submit btn btn-default btn-block", id: "btn-submit" %>
-                <%= link_to "need help?", "/help", class: "btn-help btn btn-default btn-block", id: "btn-help" %>
-              <% end %>
-            </li>
-          </ul>
-          <li><a href="/signup">sign up</a></li>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="container-fluid content">
-     <div id="thedeal">
-        <%= render partial: "pages/thedeal" %>
-     </div>
-     <div id="dameagua">
-        <%= render partial: "pages/dameagua" %>
-     </div>
-     <div id="tapout">
-       <%= render partial: "pages/tapout" %>
-     </div>
-  </div>
+<div class="container-fluid content">
+   <div id="thedeal">
+      <%= render partial: "pages/thedeal" %>
+   </div>
+   <div id="dameagua">
+      <%= render partial: "pages/dameagua" %>
+   </div>
+   <div id="tapout">
+     <%= render partial: "pages/tapout" %>
+   </div>
 </div>
 </div>

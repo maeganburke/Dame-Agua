@@ -1,15 +1,14 @@
 <div class = "container" id="profile">
+	<div class="wrapper" id="profile-wrapper">
 
-		<h1> welcome back, <p style="color: #b81f00"><%= current_user.show_username %></p> </h1>
-		<div class="divider-horizontal"></div>
-		<img src="<%= current_user.filepicker_url%>" alt="user logo" >
-		<div class="divider-horizontal"></div>
+		<h1 id="profile-welcome" class="col-lg-6"> welcome back, <span style="color: #000085"><%= current_user.show_username %></span> </h1>
 
-		<span id="profile-content">
-			<p> <b>username:</b> <%= current_user.show_username %> </p>
-			<p> <b>name:</b> <%= current_user.show_name %> </p>
-			<p> <b>email:</b> <%= current_user.show_email %> </p>
+		<span class="col-lg-6" id="profile-content">
+			<p> <b>username:</b> <br><%= current_user.show_username %> </p>
+			<p> <b>name:</b> <br><%= current_user.show_name %> </p>
+			<p> <b>email:</b> <br><%= current_user.show_email %> </p>
+			<span id="link"><%= link_to 'edit profile', profile_edit_path %></span>
 		</span>
+	</div>
 
-		<%= link_to 'edit profile', profile_edit_path %>
 </div>

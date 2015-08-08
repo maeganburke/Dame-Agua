@@ -5,15 +5,13 @@
     <% end %>
     <div class="container" id="aguaContainer">
       <br>
-      <form id="searchForm">
-        <input id="address" type="textbox" placeholder="enter address">
-        <input type="submit" value="search" class="searchsubmit">
-        <input type="button" value="use current location" id="currentLocation">
+      <form class="row" id="searchForm">
+        <input id="address" type="textbox" placeholder="enter address" class="row-lg-6">
+        <input type="submit" value="search" class="searchsubmit row-lg-3">
+        <input type="button" value="use current location" id="currentLocation" class="row-lg-3">
       </form>
 
-      <br>
-
-      <div id="map-canvas" style="width: 700px; height: 260px;"></div>
+      <div id="map-canvas" style="width: 1140px; height: 300px;"></div>
 
       <div class="btn-group-vertical method-buttons" role="group" aria-label="...">
         <button class="route-calculator"><img  data-meth="walk" src="/assets/walk.png"></button>

@@ -18,7 +18,13 @@
 
 <body class="scroll" data-spy="scroll" data-target="#dame-navbar" style="position:relative; height: 100%; overflow-y: scroll;" class="<%= controller_name %> <%= action_name %>" style="background-color: #ededed; font-family: 'Quicksand', sans-serif !important;">
 
-<%= yield %>
+  <% if current_page?('/') %>
+    <%= render partial: "layouts/navbar" %>
+  <% else %>
+    <%= render partial: "layouts/gohomenav" %>
+  <% end %>
+
+  <%= yield %>
 
   <!-- filepicker -->
   <%= filepicker_js_include_tag %>

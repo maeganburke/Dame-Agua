@@ -1,41 +1,45 @@
-// // signup page
-// #signup-form {
-//   text-align: center;
-//   font-family: 'Quicksand', sans-serif;
-//   font-weight: 500;
-//   font-size: 20px;
-// }
-//
-// #signup-form h1 {
-//   font-size: 30px;
-// }
-//
-// #signup-form select {
-//   border-radius: 3px;
-// }
-//
-// .divider-horizontal {
-//     width: 40%;                   // any height
-//     border-top: 1.5px solid gray;     // right or left is the same
-//     // float: left;                     // so BS grid doesn't break
-//     opacity: .5;
-//     margin: 20px 300px 12px 350px;
-// }
-//
-// .signup-btn {
-//   background-color: #005e66;
-//   color: white;
-//   width: 19%;
-//   border-radius: 3px;
-//   height: 40px;
-//   text-align: center;
-//   border: none;
-// }
-//
-// // profile page
-// #profile {
-//   text-align: center;
-//   font-family: 'Josefin Slab', serif;
-//   font-weight: 500;
-//   font-size: 20px;
-// }
+#profile {
+  // padding-top: 10%;
+  background-color: #ebebff;
+  height: 100vh;
+  width: auto;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  #link {
+    font-size: 22px;
+  }
+}
+
+#profile-content {
+  top: 20%;
+  font-size: 25px;
+  margin-top: 40px;
+  text-align: center;
+  span {
+    color: #000085;
+  }
+}
+
+#profile-welcome {
+  top: 20%;
+  margin-top: 40px;
+  padding-top: 10%;
+  text-align: center;
+  height: 50%;
+  border-right: 1px solid #ccc;
+  h1 {
+    font-size: 32px;
+    color: #000085;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 13px;
+  }
+}
+
+#profile-wrapper {
+  padding-top: 2%;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 25px;
+  height: 100%;
+}
