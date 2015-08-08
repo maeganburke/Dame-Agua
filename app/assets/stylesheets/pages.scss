@@ -226,10 +226,6 @@ a {
   height: 38px;
 }
 
-.searchsubmit:hover {
-  // width: 100px;
-}
-
 #currentLocation {
   background-color: #2b2b2b;
   color: white;
@@ -278,14 +274,6 @@ a {
   height: 100%;
 }
 
-#tapoutCalculator {
-  top: 35%;
-  h1 {
-    font-size: 30px;
-    color: #000085;
-  }
-}
-
 #tapout-content {
   margin-top: 40px;
   text-align: center;
@@ -297,6 +285,14 @@ a {
   h2 {
     border-bottom: 1px solid #ccc;
     padding-bottom: 13px;
+  }
+}
+
+#tapoutCalculator {
+  top: 30%;
+  h1 {
+    font-size: 30px;
+    color: #000085;
   }
 }
 

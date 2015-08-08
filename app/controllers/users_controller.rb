@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       @user.save
       session[:user_id] = @user.id
       # WelcomeMailer.welcome_email(@user).deliver_now
-      flash[:alert] = "Welcome to Dame Agua!"
+      flash[:alert] = "welcome to dame agua!"
       redirect_to '#thedeal'
     else
       flash[:notice] = "Oops! It looks like there was an error. Try again, homie!"

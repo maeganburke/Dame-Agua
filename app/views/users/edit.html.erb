@@ -1,36 +1,28 @@
-<div class="container" id="edit-form" style="margin-top: 0px;">
+<div class="container" id="edit">
 	<br>
 	<% if flash[:notice] %>
 		<div class="notice alert alert-danger alert-dismissible" role="alert"><%= flash[:notice] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
 	<% end %>
-	<div class="row">
-		<div class="col-md-4" id="edit-h">
-			<h1>Update Your Profile</h1>
+
+	<div class="wrapper" id="edit-wrapper">
+				<h1 id="edit-welcome" class="col-lg-6"> change what you want, <span style="color: #000085"><%= current_user.show_username %></span> </h1>
+
+			<div class="col-md-6" id="edit-content">
+				<%= form_for @user, url: profile_update_path, method: 'post' do |f| %>
+
+				  <%= f.text_field :name, class: "text-center", placeholder: "name", placeholder: "name" %>
+					<br>
+				  <%= f.text_field :email, class: "text-center", placeholder: "email" %>
+					<br>
+			    <%= f.text_field :username, class: "text-center", placeholder: "username" %>
+					<br>
+				  <%= f.password_field :password, class: "text-center", placeholder: "password" %>
+					<br>
+				  <%= f.password_field :password_confirmation, class: "text-center", placeholder: "confirm password" %>
+					<br>
+				  <%= f.submit "update", class: "edit-btn text-center" %>
+
+				<% end %>
+			</div>
 		</div>
-
-	  <div class="divider-vertical" id="edit-vertical"></div>
-		<div class="col-md-4">
-			<%= form_for @user, url: profile_update_path, method: 'post' do |f| %>
-
-			  name: <br> <%= f.text_field :name, class: "text-center" %>
-				<br>
-			  email: <br> <%= f.text_field :email, class: "text-center" %>
-				<br>
-		    username:  <br> <%= f.text_field :username, class: "text-center" %>
-				<br>
-			  password: <br> <%= f.password_field :password, class: "text-center" %>
-				<br>
-			  password confirmation: <br> <%= f.password_field :password_confirmation, class: "text-center" %>
-
-				<div>
-					<%= f.label :filepicker_url, "upload an avi" %> <br>
-					<%= f.filepicker_field :filepicker_url %> <!-- User#filepicker_url is a regular string column -->
-				</div>
-
-		    <div class="divider-horizontal"></div>
-			  <%= f.submit "update", class: "edit-btn text-center" %>
-
-			<% end %>
-		</div>
-	</div>
 </div>

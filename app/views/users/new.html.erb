@@ -1,35 +1,27 @@
-<div class="container" id="signup-form" style="margin-top: 0px;">
+<div class="container" id="signup" style="margin-top: 0px;">
 	<br>
 	<% if flash[:notice] %>
 		<div class="notice alert alert-danger alert-dismissible" role="alert"><%= flash[:notice] %><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
 	<% end %>
 
-	<div class="row">
-		<div class="col-md-4" id="signup-h">
-			<h1>Sign Up for Dame Agua</h1>
+	<div class="wrapper" id="signup-wrapper">
+		<div class="col-md-6" id="signup-welcome">
+			<h1><span style="color: #000085">join us</span>, you know you wanna</h1>
 		</div>
-	  <div class="divider-vertical" id="signup-vertical"></div>
 
-		<div class="col-md-4">
+		<div class="col-md-6" id="signup-content">
 			<%= form_for @user, url: '/' do |f| %>
 
-			  name: <br> <%= f.text_field :name, class: "text-center" %>
+			  <%= f.text_field :name, class: "text-center", placeholder: "full name" %>
 			  <br>
-			  email: <br> <%= f.email_field :email, class: "text-center" %>
+				<%= f.email_field :email, class: "text-center", placeholder: "email" %>
 			  <br>
-		    username:  <br> <%= f.text_field :username, class: "text-center" %>
+		    <%= f.text_field :username, class: "text-center", placeholder: "username" %>
 			  <br>
-			  password: <br> <%= f.password_field :password, class: "text-center" %>
+				<%= f.password_field :password, class: "text-center", placeholder: "password" %>
 			  <br>
-			  confirm password: <br> <%= f.password_field :password_confirmation, class: "text-center" %>
-			  <br>
-
-				<div>
-					<%= f.label :filepicker_url, "upload an avi" %> <br>
-					<%= f.filepicker_field :filepicker_url %> <!-- User#filepicker_url is a regular string column -->
-				</div>
-
-		    <div class="divider-horizontal"></div>
+				<%= f.password_field :password_confirmation, class: "text-center", placeholder: "confirm password" %>
+				<br>
 			  <%= f.submit "dame agua", class: "signup-btn text-center" %>
 
 			<% end %>

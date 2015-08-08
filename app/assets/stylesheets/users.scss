@@ -1,14 +1,98 @@
+// signup
+#signup {
+  background-color: #ebebff;
+  height: 100vh;
+  width: auto;
+  text-align: center;
+  margin: 0;
+  .signup-btn {
+    font-size: 22px;
+    margin-top: 10px;
+    background-color: #000085;
+    color: white;
+    transition: 1s all;
+    text-decoration: none;
+    width: 200px;
+  }
+  .signup-btn:hover {
+    background-color: #2b2b2b;
+    color: white;
+  }
+  input:hover, input:active {
+    border: 2px solid #000085;
+  }
+}
+
+#signup-wrapper {
+  background-color: white;
+  border-radius: 3px;
+  font-size: 25px;
+  height: 100%;
+}
+
+#signup-welcome {
+  top: 20%;
+  margin-top: 40px;
+  padding-top: 10%;
+  text-align: center;
+  height: 50%;
+  border-right: 1px solid #ccc;
+}
+
+#signup-content {
+  top: 20%;
+  font-size: 25px;
+  margin-top: 40px;
+  text-align: center;
+  span {
+    color: #000085;
+  }
+}
+
+// profile
 #profile {
-  // padding-top: 10%;
   background-color: #ebebff;
   height: 100vh;
   width: auto;
   text-align: center;
   margin: 0;
   padding: 20px;
-  #link {
+  button {
     font-size: 22px;
+    margin-top: 10px;
+    background-color: #000085;
+    color: white;
+    transition: 1s all;
+    text-decoration: none;
+    width: 200px;
   }
+  button:hover {
+    background-color: #2b2b2b;
+    color: white;
+  }
+  a {
+    color: white;
+  }
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+
+#profile-wrapper {
+  padding-top: 2%;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 25px;
+  height: 100%;
+}
+
+#profile-welcome {
+  top: 20%;
+  margin-top: 40px;
+  padding-top: 10%;
+  text-align: center;
+  height: 50%;
+  border-right: 1px solid #ccc;
 }
 
 #profile-content {
@@ -21,25 +105,53 @@
   }
 }
 
-#profile-welcome {
-  top: 20%;
+// edit profile
+
+#edit {
+  background-color: #ebebff;
+  height: 100vh;
+  width: auto;
+  text-align: center;
+  margin: 0;
+  // padding: 10px;
+  #link {
+    font-size: 22px;
+  }
+}
+
+#edit-wrapper {
+  padding-top: 10%;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 25px;
+  height: 100%;
+}
+
+#edit-welcome {
+  top: 2%;
   margin-top: 40px;
   padding-top: 10%;
   text-align: center;
   height: 50%;
   border-right: 1px solid #ccc;
-  h1 {
-    font-size: 32px;
-    color: #000085;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 13px;
-  }
 }
 
-#profile-wrapper {
-  padding-top: 2%;
-  background-color: white;
-  border-radius: 3px;
+#edit-content {
+  top: 2%;
   font-size: 25px;
-  height: 100%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.edit-btn {
+  margin-top: 10px;
+  background-color: #000085;
+  color: white;
+  transition: 1s all;
+  width: 200px;
+}
+
+.edit-btn:hover {
+  background-color: #2b2b2b;
+  color: white;
 }

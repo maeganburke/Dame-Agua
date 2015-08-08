@@ -4,10 +4,10 @@
 		<h1 id="profile-welcome" class="col-lg-6"> welcome back, <span style="color: #000085"><%= current_user.show_username %></span> </h1>
 
 		<span class="col-lg-6" id="profile-content">
-			<p> <b>username:</b> <br><%= current_user.show_username %> </p>
-			<p> <b>name:</b> <br><%= current_user.show_name %> </p>
-			<p> <b>email:</b> <br><%= current_user.show_email %> </p>
-			<span id="link"><%= link_to 'edit profile', profile_edit_path %></span>
+			<p> <b>username</b> <br><%= current_user.show_username %> </p>
+			<p> <b>name</b> <br><%= current_user.show_name %> </p>
+			<p> <b>email</b> <br><%= current_user.show_email %> </p>
+			<button id="link"><%= link_to 'edit profile', profile_edit_path %></button>
 		</span>
 	</div>
 
