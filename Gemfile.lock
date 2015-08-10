@@ -70,6 +70,7 @@ GEM
       thor (~> 0.14)
     filepicker-rails (2.0.0)
       rails (>= 3.2)
+    github-markup (1.4.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -186,6 +187,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   figaro
   filepicker-rails
+  github-markup (~> 1.4.0)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks

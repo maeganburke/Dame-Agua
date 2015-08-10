@@ -9,6 +9,7 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
 gem 'figaro'
+gem 'github-markup', '~> 1.4.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
